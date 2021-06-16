@@ -19,18 +19,18 @@
 
 
 class BankAccount:
-    def __init__(self, int_rate=0, balance=0):
+    def __init__(self, int_rate=0, account_balance=0):
         self.int_rate = int_rate
-        self.balance = balance
+        self.account_balance = account_balance
         self.interes=0
     
-    def make_deposit(self, amount):
+    def deposit(self, amount):
         self.account_balance += amount
         # print(f"El {self.name} {self.account_balance}")
         # print (self.account_balance)
         return self
         
-    def make_withdrawal(self, amount):
+    def withdraw(self, amount):
         if amount>self.account_balance:
             print(f"No puede hacer un retiro de {amount}, su saldo es de {self.account_balance}")
             return self
@@ -39,19 +39,19 @@ class BankAccount:
             return self
 
     def display_account_info(self):
-        print(f"La taza de interes es del: {self.int_rate}% y los intereses acumulados son: ${self.interes}, el saldo final es: ${self.balance}")
+        print(f"La taza de interes es del: {self.int_rate}% y los intereses acumulados son: ${self.interes}, el saldo final es: ${self.account_balance}")
         return self
 
     def yield_interest(self):
-        if (self.balance>0):
-            self.interes=self.balance*self.int_rate/100
+        if (self.account_balance>0):
+            self.interes=self.account_balance*self.int_rate/100
             return self
         else:
-            print(f"A trabajar")
+            print(f"No tiene intereses acumulados")
             return self
 
 cuenta1=BankAccount(7,200)
-cuenta2=BankAccount(5,500)
+cuenta2=BankAccount(5,2000)
 cuenta1.deposit(100).deposit(110).deposit(150).withdraw(400).yield_interest().display_account_info()
 cuenta2.deposit(100).deposit(110).withdraw(400).withdraw(400).withdraw(400).withdraw(400).yield_interest().display_account_info()
 
