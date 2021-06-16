@@ -1,3 +1,4 @@
+
 class User:	
     def __init__(self, name, email):
         self.name = name
@@ -42,11 +43,11 @@ monty.make_deposit(200)
 monty.make_deposit(50)
 monty.make_withdrawal(50)
 
-guido.display_user_balance()
-monty.display_user_balance()
-monty.transfer_money(guido,50)
-guido.display_user_balance()
-monty.display_user_balance()
+# guido.display_user_balance()
+# monty.display_user_balance()
+# monty.transfer_money(guido,50)
+# guido.display_user_balance()
+# monty.display_user_balance()
 
 monty.transfer_money(guido,500)
 
