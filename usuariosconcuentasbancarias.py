@@ -21,8 +21,8 @@ class User:
     def make_transer(self,amount):
         self.account.transfer_money(amount)
         
-    def new_account(self):
-        self.account.create()
+    # def new_account(self):
+    #     self.account.create()
     
     # def view_accoun_info():
     #     self.account.
@@ -37,13 +37,11 @@ class User:
 #     	print(self.account.balance)		# o acceder a sus atributos
 
 class BankAccount:
-    def __init__(self, int_rate=0, balance=0,accounts):
+    def __init__(self, int_rate=0, balance=0):
         self.int_rate = int_rate
         self.balance = balance
-        self.accounts={}
-        self.interes=0        
+        self.interes=0
     # def __str__():
-        return f"No ha ingresado todos los datos necesarios"
         
     def deposit(self, amount):
         self.balance += amount
@@ -73,7 +71,7 @@ class BankAccount:
             print(f"{self.name} hiso una transferencia de ${amount} a {other_user.name}")
             return self
     # def create(self):
-    #     account=
+    #     account
 
 Benjamin = User("Benjamin Livingstone","benjaminlivingstone@gmail.com")
 # Benjamin.account=BankAccount(0.07,200)
