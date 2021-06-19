@@ -91,4 +91,4 @@ Benjamin = User("Benjamin Livingstone","benjaminlivingstone@gmail.com")
 
 Benjamin.make_deposit(100)
 
-# print(Benjamin.account.balance)
+print(Benjamin.account.balance)
